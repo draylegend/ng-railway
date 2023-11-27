@@ -3,7 +3,7 @@
     persist_config off # storage isn't persistent anyway
     auto_https off # railway handles https for us, this would cause issues if left enabled
     log { # runtime logs
-        format console # set runtime log format to console mode 
+        format console # set runtime log format to console mode
     }
     servers { # server options
         trusted_proxies static private_ranges # trust railway's proxy
@@ -18,8 +18,8 @@
     # health check for railway
     respond /health 200
 
-    # serve from the 'dist' folder (Angular has been set to build into the 'dist' folder)
-    root * dist
+    # serve from the 'dist/myApp/browser' folder (Angular has been set to build into the 'dist/myApp/browser' folder)
+    root * dist/myApp/browser
 
     # enable gzipping responses
     encode gzip
