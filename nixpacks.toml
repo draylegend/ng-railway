@@ -6,6 +6,7 @@
     NPM_CONFIG_FUND = 'false' # the fund notification is also pretty useless in a production environment
 #    CADDY_VERSION = '2.7.5' # specify the caddy version to use here, without a 'v' prefix. https://github.com/caddyserver/caddy/releases
     NODE_VERSION = 'v21.2.0' # specify the caddy version to use here, without a 'v' prefix. https://github.com/caddyserver/caddy/releases
+    cmd = 'node -v'
 
 # download and untar caddy
 #[phases.caddy]
@@ -20,6 +21,7 @@
 [phases.node]
     dependsOn = ['setup'] # make sure this phase runs after the default 'setup' phase
     cmds = [
+        'node -v',
         'curl -fsSLo node.tar.gz https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.gz', # download the node release specified by 'NODE_VERSION' from nodejs.org
         'tar -zxvf node.tar.gz node-${NODE_VERSION}-linux-x64/bin/node', # only extract node from the tarball
     ]
