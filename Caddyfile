@@ -24,7 +24,7 @@
     # enable gzipping responses
     encode gzip
 
-    # serve files from 'dist'
+    # serve files from 'dist/myApp/browser'
     file_server
 
     # if path doesn't exist, redirect it to 'index.html' for client side routing
