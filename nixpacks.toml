@@ -26,6 +26,9 @@
         'tar -zxvf node.tar.gz node-${NODE_VERSION}-linux-x64/bin/node', # only extract node from the tarball
     ]
 
+[phases.build]
+    cmds = ['npm run build:ssr']
+
 # copy node and build artifacts to a new image and start the node server
 [start]
     runImage = 'ubuntu:20.04' # use a new ubuntu image to run the caddy server in
