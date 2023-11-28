@@ -30,4 +30,4 @@
 [start]
     runImage = 'ubuntu:20.04' # use a new ubuntu image to run the caddy server in
     onlyIncludeFiles = ['node-${NODE_VERSION}-linux-x64/bin/node', 'dist'] # copy only the needed files and folders into the new image (Angular is configured to build to a 'dist' folder)
-    cmds = ['./node-v21.2.0-linux-x64/bin/node dist/myApp/server/main.js'] # start
+    cmd = './node-v21.2.0-linux-x64/bin/node dist/myApp/server/main.js' # start
